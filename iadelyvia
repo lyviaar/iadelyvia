@@ -1,0 +1,20 @@
+def responder_pergunta(pergunta):
+    if "qual seu nome" in pergunta:
+        return "Meu nome é Nabucodonosor."
+    elif "quem é nabucodonosor" in pergunta:
+        return "Nabucodonosor foi um rei da Babilônia."
+    else:
+        return "Desculpe, eu não entendi a pergunta."
+
+def main():
+    print("Olá! Eu sou um agente de inteligencia. Você pode fazer as suas perguntas!")
+    while True:
+        pergunta = input("Digite sua pergunta (ou 'encerrar sessão'): ").lower()
+        if pergunta == "encerrar sess":
+            print("Até logo!")
+            break
+        resposta = responder_pergunta(pergunta)
+        print(resposta)
+
+if __name__ == "__main__":
+    main()
